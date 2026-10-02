@@ -1,4 +1,4 @@
-package com.acmestrait
+package com.straitlink.app
 
 import android.app.Application
 import com.facebook.react.PackageList

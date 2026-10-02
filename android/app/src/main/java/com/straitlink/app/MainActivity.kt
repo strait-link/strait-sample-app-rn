@@ -1,4 +1,4 @@
-package com.acmestrait
+package com.straitlink.app
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
