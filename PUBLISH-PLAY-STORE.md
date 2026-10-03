@@ -42,7 +42,7 @@ Google will manage the real signing key; our keystore is just the *upload* key.
 ## Step 4 🧑 — Upload the AAB
 On the release page → **Upload** → choose the file:
 ```
-~/Desktop/work/strait/samples/AcmeStrait/android/app/build/outputs/bundle/release/app-release.aab
+samples/AcmeStrait/android/app/build/outputs/bundle/release/app-release.aab
 ```
 Add a release name (e.g. `1.0 (1)`) and any note → **Next** → **Save**.
 
@@ -77,14 +77,14 @@ Once installed from Play:
 
 ## Rebuilding the AAB later
 ```sh
-cd ~/Desktop/work/strait/samples/AcmeStrait
+cd samples/AcmeStrait
 # bump android/app/build.gradle versionCode (2, 3, …) for each new upload
 cd android && ./gradlew bundleRelease
 ```
 Signing is automatic (reads `android/keystore.properties`).
 
 ## Keep these safe (gitignored, never commit) 🧑
-- `android/app/straitlink-upload.keystore` — the upload key
+- `android/app/*-upload.keystore` (path in `android/keystore.properties`) — the upload key
 - `android/keystore.properties` — its passwords
 
 If you lose the upload key you can reset it via Play Console (because Play App

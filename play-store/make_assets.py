@@ -17,8 +17,9 @@ MINT = (190, 232, 219)
 FONT_BOLD = "/System/Library/Fonts/Avenir Next.ttc"
 
 
-def strait_glyph(size: int, color=WHITE) -> Image.Image:
-    """A bridge arch over a deck with two towers, drawn at 4x then downscaled."""
+def brand_glyph(size: int, color=WHITE) -> Image.Image:
+    """The placeholder mark (an arch over a deck with two towers), drawn at 4x then downscaled.
+    TODO: swap for the final Strait logo."""
     s = size * 4
     img = Image.new("RGBA", (s, s), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
@@ -53,7 +54,7 @@ def icon(size: int, shape: str = "square") -> Image.Image:
         else:  # rounded (legacy launcher)
             md.rounded_rectangle([0, 0, size * 4 - 1, size * 4 - 1], radius=size * 4 // 5, fill=255)
         base.putalpha(mask.resize((size, size), Image.LANCZOS))
-    glyph = strait_glyph(int(size * 0.78))
+    glyph = brand_glyph(int(size * 0.78))
     off = (size - glyph.width) // 2
     base.alpha_composite(glyph, (off, off - int(size * 0.07)))
     return base
@@ -66,7 +67,7 @@ def feature() -> Image.Image:
     for x in range(W):  # subtle left→right shade
         t = x / W
         d.line([x, 0, x, H], fill=tuple(int(GREEN[i] * (1 - t) + GREEN_DARK[i] * t) for i in range(3)))
-    g = strait_glyph(300)
+    g = brand_glyph(300)
     img.paste(g, (70, 100), g)
     title = ImageFont.truetype(FONT_BOLD, 92, index=0)
     sub = ImageFont.truetype(FONT_BOLD, 38, index=0)

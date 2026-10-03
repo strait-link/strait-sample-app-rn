@@ -28,7 +28,7 @@ import { PlayInstallReferrer } from 'react-native-play-install-referrer';
 import { createStrait, fromPlayInstallReferrer } from '@strait/sdk-react-native';
 
 const strait = createStrait({
-  publishableKey: 'bk_pub_live_…',            // Dashboard → Get started
+  publishableKey: 'st_pub_live_…',            // Dashboard → Get started
   endpoint: 'https://bridge-redirect-engine.onrender.com',
   storage: AsyncStorage,                       // deferred check once per install
   installReferrer: fromPlayInstallReferrer(PlayInstallReferrer),

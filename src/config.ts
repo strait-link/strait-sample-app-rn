@@ -4,7 +4,7 @@
  * Both can be changed at runtime in Settings.
  */
 export const DEFAULT_ENDPOINT = 'https://bridge-redirect-engine.onrender.com';
-export const DEFAULT_PUBLISHABLE_KEY = 'bk_pub_live_62406c705fed406db90c1deeecdb183b';
+export const DEFAULT_PUBLISHABLE_KEY = 'st_pub_live_62406c705fed406db90c1deeecdb183b';
 
 /** Required by Google Play: linked from the store listing and from Settings. */
 export const PRIVACY_POLICY_URL = 'https://bazingga08.github.io/strait-demo-site/privacy.html';
